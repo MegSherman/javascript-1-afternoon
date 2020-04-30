@@ -2,7 +2,8 @@
 
 //Create a variable called myName that is a string data type
 
-const myName = "Meg"
+const myName = 'Meg'
+
 
 //////////////////PROBLEM 2////////////////////
 
@@ -20,7 +21,7 @@ const lovesCode = true
 
 //Create a variable called greatestFear that is undefined because we fear nothing
 
-const greatestFear
+const greatestFear = undefined
 
 //////////////////PROBLEM 5////////////////////
 
@@ -44,14 +45,16 @@ function greeting (name){
 //Write a function expression called newGreeting.
 //Give it the same functionality as the function greeting in Problem 6.
 
-//Code Here
+const newGreeting = function (name) {
+  return `Hello, ${name}`
+}
 
 //////////////////PROBLEM 8////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
 
-//Code Here
+const groceries = ["apples", "milk", "eggs", "bread"]
 
 //////////////////PROBLEM 9////////////////////
 
@@ -60,12 +63,18 @@ function greeting (name){
 //name (a string), color (a string), age (a number),
 //and goodBoy (a boolean).
 
-//Code Here
+const dog = {
+  name: "Dubs",
+  color: "grey",
+  age: 5,
+}
+
+dog.goodBoy = true
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
-//Code Here
+const devMountainClassPet = dog.name
 
 //////////////////PROBLEM 10////////////////////
 
@@ -76,7 +85,15 @@ function greeting (name){
 // If the name parameter is anything else, return 'Cool name, NAMEPARAM'
 // with NAMEPARAM being the name parameter being passed in (not literally NAMEPARAM)
 
-// Code here
+const nameCheck = (name) => {
+  if (name === 'Steven') {
+    return 'What is up Steven?'
+  } else if (name === "Bryan"){
+    return 'Hey Bryan!'
+  } else {
+    return 'Cool name, ' + name
+  }
+}
 
 //////////////////PROBLEM 11////////////////////
 
@@ -84,12 +101,14 @@ function greeting (name){
 // that will be numbers.
 // The add function should return the two parameters added together
 
-//Code Here
+const add = (num1, num2) => {
+  return num1 + num2
+}
 
 //Now invoke add, passing in the numbers 3 and 4
 //storing the result in the variable mathSum.
 
-//Code Here
+const mathSum = add (3,4)
 
 //////////////////PROBLEM 12////////////////////
 
@@ -100,7 +119,17 @@ function greeting (name){
 // If the passed in color equals 'black', return 'so trendy'
 // Otherwise, you should return the string 'you need to evaluate your favorite color choice'
 
-// Code here
+const faveColorFinder = (color) => {
+  if (color === 'red') {
+    return 'red is a great color'
+  } else if (color === 'green') {
+    return 'green is a solid favorite color' 
+  } else if (color === 'black') {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
 
 //////////////////PROBLEM 13////////////////////
 
@@ -124,28 +153,28 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "rubberDuck", "sailorDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", "realDuck"];
 
 //////////////////PROBLEM 14////////////////////
 
 //Create a variable called age with your age assigned to you
 
-// Code Here
+var age = 40
 
 // FLASH FORWARD TO NEXT YEAR
 // reassign the value of age to be one greater than it was, because, we all get older
 
-// Code Here
+var age = 41
 
 // Good news! We can live forever. Set your age to 999
 
-// Code Here
+var age = 999
